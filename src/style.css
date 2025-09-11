@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --font-Kamerik: "Kamerik", sans-serif;
+  --font-SF-Pro: "SF-Pro", sans-serif;
+}
+
+.underline_decoration::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 8px;
+}

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Ultralight.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('/assets/fonts/SF-Pro-Display/SF-Pro-Display-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kamerik';
+  src: url('/assets/fonts/Kamerik105/Kamerik105Cyrillic-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kamerik';
+  src: url('/assets/fonts/Kamerik105/Kamerik105Cyrillic-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kamerik';
+  src: url('/assets/fonts/Kamerik105/Kamerik105Cyrillic-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kamerik';
+  src: url('src/assets/fonts/Kamerik105/Kamerik105Cyrillic-Bold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kamerik';
+  src: url('src/assets/fonts/Kamerik105/Kamerik105Cyrillic-Heavy.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}

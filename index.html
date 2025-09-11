@@ -1,29 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
   <header>
 
   </header>
   <nav>
-    <ul>
-      <li>Fondements physiques</li>
-        <li><a href="src/html/aero_en_f1.html">Aérodynamisme en F1</a></li>
-      <li>Aérodynamisme en WEC</li>
-      <li>Intérêts et bénéfices</li>
-      <li>Perspectives futures</li>
+    <ul class="flex w-full h-[100px] justify-center items-center gap-[60px]">
+      <li><a class="font-SF-Pro font-[200] text-[20px]" href="src/html/fondements.html">Fondements</a></li>
+      <li><a class="font-SF-Pro font-[200] text-[20px]" href="src/html/applications.html">Applications</a></li>
+      <li><a class="font-SF-Pro font-[200] text-[20px]" href="src/html/interets.html">Intérêts & bénéfices</a></li>
+      <li><a class="font-SF-Pro font-[200] text-[20px]" href="src/html/futures.html">Futures</a></li>
     </ul>
   </nav>
-  <main>
-    <h1 class="text-xl uppercase font-bold">Aérodynamisme en sport auto</h1>
+  <main class="max-w-[1280px] mx-auto">
+    <section class="flex flex-col items-center">
+      <img src="public/images/index_aero.png" alt="Photo d'une monoplace de l'équipe Alfa Romeo Racing dans une soufflerie" class="rounded-[20px]">
+      <h1 aria-labelledby="site-title" class="font-Kamerik text-[48px] font-[400] mt-[100px]">Aérodynamisme en sport auto</h1>
+      <h2 class="font-SF-Pro text-[20px] font-[300]">Le guide pour tout comprendre</h2>
+    </section>
   </main>
   <footer>
 
   </footer>
-  </body>
+</body>
+
 </html>
