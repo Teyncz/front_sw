@@ -6,10 +6,25 @@
   --font-SF-Pro: "SF-Pro", sans-serif;
 }
 
+.underline_decoration {
+    position: relative;
+}
+
 .underline_decoration::after {
   content: "";
+  position: relative;
   display: block;
-  width: 100%;
+  width: 0%;
   height: 1px;
-  margin-top: 8px;
+  background-color: black;
+  transition: all ease 0.2s;
+}
+
+.underline_decoration:hover::after {
+    width: 100%;
+    transition: all ease 0.2s;
+}
+
+.submenu:hover ul {
+    display: flex;
 }
