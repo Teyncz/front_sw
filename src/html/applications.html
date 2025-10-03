@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Aero – Applications (F1 & WEC)</title>
+  <meta name="description" content="Applications de l’aérodynamisme en sport auto : F1 (ailerons, effet de sol, DRS) et endurance/WEC (hypercars, stabilité, refroidissement, efficience), en version accessible." />
+</head>
+
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased">
+  <!-- Lien d’évitement -->
+  <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
+    Aller au contenu principal
+  </a>
+
+  <!-- En-tête -->
+  <header role="banner" class="w-full border-b border-zinc-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-zinc-800 dark:bg-zinc-900/80">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <p class="font-Kamerik text-xl font-[600]">Physique & Sport Auto</p>
+      <p class="sr-only" id="site-desc">Page Applications : mise en pratique en F1 et en WEC.</p>
+    </div>
+  </header>
+
+  <!-- Navigation principale -->
+  <nav aria-label="Navigation principale" class="border-b border-zinc-200 dark:border-zinc-800">
+    <ul class="flex w-full h-[72px] justify-center items-center gap-[40px]">
+      <li>
+        <a class="font-SF-Pro text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+           href="./fondements.html">
+          Fondements
+        </a>
+      </li>
+
+      <li class="relative">
+        <details class="group">
+          <summary class="list-none font-SF-Pro text-[18px] underline_decoration cursor-pointer rounded px-1 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                   aria-haspopup="menu" aria-expanded="false">
+            Applications
+          </summary>
+          <ul role="menu" aria-label="Sous-menu Applications"
+              class="absolute bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-5 pt-4 pb-3 -translate-x-2 mt-2 rounded-lg shadow-lg space-y-3 w-[260px]">
+            <li role="none"><a role="menuitem" class="block font-SF-Pro text-[16px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1" href="#aero-f1">Aérodynamisme en F1</a></li>
+            <li role="none"><a role="menuitem" class="block font-SF-Pro text-[16px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1" href="#aero-wec">Aérodynamisme en WEC</a></li>
+          </ul>
+        </details>
+      </li>
+
+      <li>
+        <a class="font-SF-Pro text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+           href="./interets.html">
+          Intérêts & bénéfices
+        </a>
+      </li>
+      <li>
+        <a class="font-SF-Pro text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+           href="./futures.html">
+          Futures
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="contenu" tabindex="-1" class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Fil d’Ariane -->
+    <nav aria-label="Fil d’Ariane">
+      <ol class="flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+        <li><a class="underline underline-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1" href="../../index.html">Accueil</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page" class="text-zinc-800 dark:text-zinc-200">Applications</li>
+      </ol>
+    </nav>
+
+    <!-- Titre de page -->
+    <header class="mt-6">
+      <h1 class="font-Kamerik text-[40px] font-[600]">Applications : F1 & WEC</h1>
+      <p class="font-SF-Pro mt-2 max-w-prose leading-relaxed">
+        Comment les principes vus dans les <a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1" href="./fondements.html">fondements</a>
+        s’appliquent aux monoplaces de Formule 1 et aux hypercars d’endurance ? Ci-dessous, une synthèse claire et accessible.
+      </p>
+    </header>
+
+    <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
+
+    <!-- Section F1 -->
+    <section id="aero-f1" aria-labelledby="f1-titre" class="scroll-mt-28">
+      <h2 id="f1-titre" class="font-Kamerik text-[28px] font-[600]">Aérodynamisme en F1</h2>
+      <p class="font-SF-Pro mt-2">
+        En F1, l’objectif est d’atteindre un compromis fin entre <strong>appui</strong> très élevé en virage et <strong>traînée</strong> la plus faible possible en ligne droite.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <article class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+          <h3 class="font-Kamerik text-[22px] font-[600]">Ailerons avant & arrière</h3>
+          <ul class="list-disc pl-6 font-SF-Pro mt-2 space-y-1">
+            <li>Guident le flux d’air autour des pneus et du châssis.</li>
+            <li>Génèrent l’appui (downforce) pour le grip en virage.</li>
+            <li>Réglages par incidence et éléments (flaps) selon les circuits.</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+          <h3 class="font-Kamerik text-[22px] font-[600]">Effet de sol & diffuseur</h3>
+          <ul class="list-disc pl-6 font-SF-Pro mt-2 space-y-1">
+            <li>Canaux venturi sous la voiture : accélèrent l’air → dépression → appui.</li>
+            <li>Diffuseur arrière : récupère/accélère le flux pour stabiliser la dépression.</li>
+            <li>Bords de fuite et jupes aéros (selon règlement) pour limiter les pertes latérales.</li>
+          </ul>
+        </article>
+
+        <article class="md:col-span-2 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+          <h3 class="font-Kamerik text-[22px] font-[600]">DRS (Drag Reduction System)</h3>
+          <p class="font-SF-Pro mt-2">
+            Système d’ouverture contrôlée d’un volet d’aileron arrière afin de <strong>réduire la traînée</strong> en ligne droite (zones et conditions définies par le règlement).
+            Avantage : vitesse de pointe accrue sans sacrifier l’appui en virage (volet refermé).
+          </p>
+        </article>
+      </div>
+
+      <figure class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-4 mt-4">
+        <img src="../../public/images/app_f1.png"
+             alt="Schéma F1 : ailerons avant/arrière, canaux sous la voiture et diffuseur, avec flèches indiquant l’écoulement."
+             class="w-full h-auto rounded">
+        <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
+          F1 : équilibre appui/traînée, effet de sol canalisé et DRS pour dépasser.
+        </figcaption>
+      </figure>
+    </section>
+
+    <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
+
+    <!-- Section WEC -->
+    <section id="aero-wec" aria-labelledby="wec-titre" class="scroll-mt-28">
+      <h2 id="wec-titre" class="font-Kamerik text-[28px] font-[600]">Aérodynamisme en WEC (Endurance)</h2>
+      <p class="font-SF-Pro mt-2">
+        En endurance (Hypercars), l’aérodynamisme vise la <strong>stabilité</strong>, le <strong>refroidissement</strong> et l’<strong>efficience</strong> pendant de longues durées (ex. 24 Heures du Mans).
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <article class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+          <h3 class="font-Kamerik text-[22px] font-[600]">Carrosserie & carénages</h3>
+          <ul class="list-disc pl-6 font-SF-Pro mt-2 space-y-1">
+            <li>Carénages fermés : gèrent la traînée et protègent des turbulences.</li>
+            <li>Entrées/sorties d’air optimisées pour refroidir freins, moteur et systèmes hybrides.</li>
+            <li>Priorité : constance de performance et fiabilité.</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+          <h3 class="font-Kamerik text-[22px] font-[600]">Stabilité & efficience</h3>
+          <ul class="list-disc pl-6 font-SF-Pro mt-2 space-y-1">
+            <li>Appui plus « progressif » pour tolérer les variations de charge carburant/pneus.</li>
+            <li>Équilibre aéro pour limiter l’usure et la fatigue du pilote.</li>
+            <li>Réduction de traînée ciblée : consommer moins sur la durée.</li>
+          </ul>
+        </article>
+      </div>
+
+      <figure class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-4 mt-4">
+        <img src="../../public/images/app_wec.png"
+             alt="Schéma Hypercar : flux sur carrosserie fermée, prises d’air de refroidissement et diffuseur large."
+             class="w-full h-auto rounded">
+        <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
+          Hypercar : stabilité, refroidissement et efficience avant tout.
+        </figcaption>
+      </figure>
+    </section>
+
+    <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
+
+    <!-- Tableau comparatif + alternative accessible -->
+    <section aria-labelledby="comparatif-titre" class="scroll-mt-28">
+      <h2 id="comparatif-titre" class="font-Kamerik text-[28px] font-[600]">Comparatif synthétique</h2>
+
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full text-left border-collapse font-SF-Pro">
+          <caption class="sr-only">Comparaison des priorités aérodynamiques entre F1 et WEC</caption>
+          <thead>
+            <tr class="border-b border-zinc-300 dark:border-zinc-700">
+              <th scope="col" class="py-2 pr-4">Catégorie</th>
+              <th scope="col" class="py-2 pr-4">Priorité aéro</th>
+              <th scope="col" class="py-2 pr-4">Traînée</th>
+              <th scope="col" class="py-2 pr-4">Appui</th>
+              <th scope="col" class="py-2 pr-4">Spécificités</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-zinc-200/70 dark:border-zinc-800/70">
+              <th scope="row" class="py-2 pr-4 font-[600]">F1</th>
+              <td class="py-2 pr-4">Performance au tour</td>
+              <td class="py-2 pr-4">Faible en ligne droite (DRS)</td>
+              <td class="py-2 pr-4">Très élevé en virage</td>
+              <td class="py-2 pr-4">Ailerons complexes, canaux venturi</td>
+            </tr>
+            <tr>
+              <th scope="row" class="py-2 pr-4 font-[600]">WEC (Hypercars)</th>
+              <td class="py-2 pr-4">Stabilité & efficience</td>
+              <td class="py-2 pr-4">Optimisée sur la durée</td>
+              <td class="py-2 pr-4">Élevé mais progressif</td>
+              <td class="py-2 pr-4">Carrosseries fermées, refroidissement accru</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="mt-6 rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
+        <summary class="font-SF-Pro font-[600] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1">
+          Alternative simple (lecteur d’écran)
+        </summary>
+        <ul class="mt-3 space-y-2 font-SF-Pro">
+          <li><strong>F1</strong> : priorité à la performance au tour. Traînée faible en ligne droite grâce au DRS. Appui très élevé en virage. Ailerons complexes et canaux venturi.</li>
+          <li><strong>WEC</strong> : priorité à la stabilité et à l’efficience sur la durée. Traînée optimisée. Appui élevé mais progressif. Carrosseries fermées et refroidissement renforcé.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Navigation chapitre -->
+    <nav aria-label="Navigation chapitre" class="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <a href="./fondements.html" class="inline-block rounded-xl border border-zinc-300 dark:border-zinc-700 px-5 py-3 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+        ← Revoir les Fondements
+      </a>
+      <a href="./interets.html" class="inline-block rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-5 py-3 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+        Poursuivre vers Intérêts & bénéfices →
+      </a>
+    </nav>
+  </main>
+
+  <footer role="contentinfo" class="mt-16 border-t border-zinc-200 dark:border-zinc-800">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 grid gap-6 md:grid-cols-3">
+      <section aria-labelledby="pied-ressources">
+        <h2 id="pied-ressources" class="font-Kamerik text-[20px] font-[600]">Ressources</h2>
+        <ul class="mt-3 space-y-2 font-SF-Pro">
+          <li><a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded" href="./plan.html">Plan du site</a></li>
+          <li><a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded" href="./mentions.html">Mentions légales & RGPD</a></li>
+          <li><a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded" href="./accessibilite.html">Accessibilité</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="pied-contact">
+        <h2 id="pied-contact" class="font-Kamerik text-[20px] font-[600]">Contact</h2>
+        <p class="mt-3 font-SF-Pro">Question sur cette page ? Écris-nous.</p>
+        <a href="mailto:contact@example.com"
+           class="mt-2 inline-block rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-4 py-2 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+          Envoyer un e-mail
+        </a>
+      </section>
+
+      <section aria-labelledby="pied-aide">
+        <h2 id="pied-aide" class="font-Kamerik text-[20px] font-[600]">Aide</h2>
+        <ul class="mt-3 space-y-2 font-SF-Pro">
+          <li>Navigation au clavier : Tab / Maj+Tab.</li>
+          <li>Focus visible sur tous les liens et contrôles.</li>
+          <li>Images avec descriptions alternatives pertinentes.</li>
+        </ul>
+      </section>
+    </div>
+    <div class="text-center text-sm text-zinc-600 dark:text-zinc-400 pb-6">© 2025 – Physique & Sport Auto</div>
+  </footer>
+
+  <!-- Sync aria-expanded pour <summary> -->
+  <script>
+    const details = document.querySelectorAll('details');
+    details.forEach(d => {
+      const summary = d.querySelector('summary');
+      if (!summary) return;
+      const sync = () => summary.setAttribute('aria-expanded', d.open ? 'true' : 'false');
+      d.addEventListener('toggle', sync);
+      sync();
+    });
+  </script>
+</body>
+</html>
