@@ -3,21 +3,16 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="../../src/style.css">
+  <link rel="stylesheet" href="/src/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark" />
-  <title>Accessibilité</title>
+  <title>Aero – Futures</title>
   <meta name="description"
-    content="Engagements d’accessibilité : navigation clavier, lecteurs d’écran, focus visibles, alternatives textuelles et conformité RGAA." />
+    content="Les innovations futures en aérodynamisme automobile : ailerons actifs, IA, matériaux durables, et perspectives de durabilité." />
 </head>
 
-<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased">
-  <!-- Lien d’évitement -->
-  <a href="#contenu"
-    class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
-    Aller au contenu principal
-  </a>
-
+<body>
+  <a href="#contenu" class="sr-only focus:not-sr-only">Aller au contenu</a>
   <header role="banner"
     class="w-full border-b border-zinc-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-zinc-800 dark:bg-zinc-900/80">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -52,14 +47,14 @@
             <li role="none">
               <a role="menuitem"
                 class="block font-SF-Pro font-[200] text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
-                href="/public/pages/applications.html#aero-f1">
+                href="/src/html/applications.html#aero-f1">
                 Aérodynamisme en F1
               </a>
             </li>
             <li role="none">
               <a role="menuitem"
                 class="block font-SF-Pro font-[200] text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
-                href="/public/pages/applications.html#aero-wec">
+                href="/src/html/applications.html#aero-wec">
                 Aérodynamisme en WEC
               </a>
             </li>
@@ -69,19 +64,19 @@
 
       <li>
         <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
-          href="/public/pages/interets.html">
+          href="/src/html/interets.html">
           Intérêts & bénéfices
         </a>
       </li>
       <li>
         <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
-          href="/public/pages/futures.html">
+          href="/src/html/futures.html">
           Futures
         </a>
       </li>
       <li>
         <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
-          href="/public/pages/contact.html">
+          href="./contact.html">
           Contact
         </a>
       </li>
@@ -89,45 +84,27 @@
     </ul>
   </nav>
 
-  <!-- Contenu principal -->
-  <main id="contenu" class="max-w-[1280px] mx-auto px-4 py-8" tabindex="-1">
-    <h1 class="text-3xl font-bold">Accessibilité</h1>
-    <p class="mt-4">Notre site a été pensé pour être utilisable par toutes et tous. Nous appliquons les recommandations
-      du RGAA et veillons à ce que chaque utilisateur ait accès aux mêmes contenus.</p>
-
+  <main id="contenu" tabindex="-1" class="max-w-[1280px] mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold">Futures innovations</h1>
     <section class="mt-8">
-      <h2 class="text-2xl font-semibold">Principes appliqués</h2>
-      <ul class="list-disc pl-6 mt-4 space-y-2">
-        <li>Navigation complète au clavier, avec ordre logique et focus visibles.</li>
-        <li>Compatibilité lecteurs d’écran grâce à des titres hiérarchisés et des landmarks sémantiques (header, nav,
-          main, footer).</li>
-        <li>Contrastes suffisants pour assurer une bonne lisibilité en mode clair comme en mode sombre.</li>
-        <li>Images porteuses d’information décrites via attribut <code>alt</code> pertinent.</li>
-        <li>Tableaux accompagnés d’une alternative textuelle simplifiée.</li>
-        <li>Formulaires accessibles avec des <code>label</code> explicites, des champs requis indiqués, et messages
-          d’erreur annoncés.</li>
-      </ul>
+      <h2 class="text-2xl font-semibold">Ailerons actifs</h2>
+      <p>Technologie permettant d’adapter automatiquement l’appui et la traînée selon la situation (accélération,
+        virage, freinage).</p>
+    </section>
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold">Intelligence artificielle</h2>
+      <p>Simulation numérique et optimisation en temps réel des formes et réglages aérodynamiques.</p>
+    </section>
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold">Durabilité</h2>
+      <p>Développement de matériaux plus légers, résistants et recyclables pour réduire l’empreinte carbone.</p>
     </section>
 
-    <section class="mt-8">
-      <h2 class="text-2xl font-semibold">Limites et améliorations</h2>
-      <p class="mt-2">Nous poursuivons nos efforts pour améliorer continuellement l’accessibilité. Si vous rencontrez un
-        problème d’accès, vous pouvez nous contacter afin que nous corrigions rapidement l’erreur.</p>
-    </section>
-
-    <!-- Navigation de bas de page -->
     <nav class="mt-12 flex justify-between">
-      <a href="./futures.html" class="underline underline-offset-4">← Revoir Futures</a>
-      <a href="./plan.html" class="underline underline-offset-4">Voir le Plan du site →</a>
+      <a href="./interets.html">← Revoir les Intérêts</a>
+      <a href="./accessibilite.html">Voir la page Accessibilité →</a>
     </nav>
   </main>
-
-  <!-- Pied de page -->
-  <footer role="contentinfo" class="mt-16 border-t">
-    <div class="max-w-[1280px] mx-auto px-4 py-6 text-sm text-zinc-600 dark:text-zinc-400 text-center">
-      © 2025 – Physique & Sport Auto | <a href="./mentions.html" class="underline">Mentions légales</a>
-    </div>
-  </footer>
 </body>
 
 </html>
