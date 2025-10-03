@@ -14,19 +14,64 @@
     Aller au contenu principal
   </a>
 
-  <!-- En-tête -->
-  <header role="banner" class="border-b p-4">
-    <p class="font-Kamerik text-xl font-semibold">Physique & Sport Auto</p>
+  <header role="banner" class="w-full border-b border-zinc-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-zinc-800 dark:bg-zinc-900/80">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span aria-hidden="true" class="text-2xl">🏎️</span>
+        <p class="font-Kamerik text-xl font-[600]">Physique & Sport Auto</p>
+      </div>
+      <p class="sr-only" id="site-desc">Site pédagogique sur l’aérodynamisme et la physique du sport automobile, entièrement navigable au clavier et compatible lecteurs d’écran.</p>
+    </div>
   </header>
 
-  <!-- Navigation principale -->
-  <nav aria-label="Navigation principale" class="border-b">
-    <ul class="flex gap-6 justify-center h-[72px] items-center">
-      <li><a href="./fondements.html">Fondements</a></li>
-      <li><a href="./applications.html">Applications</a></li>
-      <li><a href="./interets.html">Intérêts</a></li>
-      <li><a href="./futures.html">Futures</a></li>
-      <li><a href="./accessibilite.html" aria-current="page">Accessibilité</a></li>
+  <nav aria-label="Navigation principale" class="border-b border-zinc-200 dark:border-zinc-800">
+    <ul class="flex w-full h-[100px] justify-center items-center gap-[60px]">
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="/src/html/fondements.html">
+          Fondements
+        </a>
+      </li>
+
+      <li class="relative">
+        <details class="submenu group">
+          <summary class="list-none font-SF-Pro font-[200] text-[20px] underline_decoration cursor-pointer rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                   aria-haspopup="menu" aria-expanded="false">
+            Applications
+            <span class="sr-only">, ouvrir le sous-menu</span>
+          </summary>
+          <ul role="menu" aria-label="Sous-menu Applications"
+              class="absolute bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-[20px] pt-[20px] pb-[10px] translate-x-[-20px] mt-2 rounded-lg shadow-lg space-y-[20px] w-[260px]">
+            <li role="none">
+              <a role="menuitem"
+                 class="block font-SF-Pro font-[200] text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+                 href="/src/html/applications.html#aero-f1">
+                Aérodynamisme en F1
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem"
+                 class="block font-SF-Pro font-[200] text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+                 href="/src/html/applications.html#aero-wec">
+                Aérodynamisme en WEC
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="/src/html/interets.html">
+          Intérêts & bénéfices
+        </a>
+      </li>
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="/src/html/futures.html">
+          Futures
+        </a>
+      </li>
     </ul>
   </nav>
 
