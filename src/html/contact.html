@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Contact</title>
+  <meta name="description" content="Page de contact accessible : écrivez-nous au sujet du site Physique & Sport Auto. Formulaire compatible clavier et lecteurs d’écran." />
+</head>
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased">
+  <!-- Lien d’évitement -->
+  <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
+    Aller au contenu principal
+  </a>
+
+  <!-- En-tête -->
+  <header role="banner" class="w-full border-b border-zinc-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-zinc-800 dark:bg-zinc-900/80">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span aria-hidden="true" class="text-2xl">🏎️</span>
+        <p class="font-Kamerik text-xl font-[600]">Physique & Sport Auto</p>
+      </div>
+      <p class="sr-only" id="site-desc">
+        Site pédagogique sur l’aérodynamisme et la physique du sport automobile, entièrement navigable au clavier et compatible lecteurs d’écran.
+      </p>
+    </div>
+  </header>
+
+  <!-- Navigation principale -->
+  <nav aria-label="Navigation principale" class="border-b border-zinc-200 dark:border-zinc-800">
+    <ul class="flex w-full h-[100px] justify-center items-center gap-[60px]">
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="./fondements.html">Fondements</a>
+      </li>
+      <li class="relative">
+        <details class="submenu group">
+          <summary class="list-none font-SF-Pro font-[200] text-[20px] underline_decoration cursor-pointer rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                   aria-haspopup="menu" aria-expanded="false">
+            Applications
+            <span class="sr-only">, ouvrir le sous-menu</span>
+          </summary>
+          <ul role="menu" aria-label="Sous-menu Applications"
+              class="absolute bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-[20px] pt-[20px] pb-[10px] translate-x-[-20px] mt-2 rounded-lg shadow-lg space-y-[20px] w-[260px]">
+            <li role="none">
+              <a role="menuitem"
+                 class="block font-SF-Pro font-[200] text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+                 href="./applications.html#aero-f1">Aérodynamisme en F1</a>
+            </li>
+            <li role="none">
+              <a role="menuitem"
+                 class="block font-SF-Pro font-[200] text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1"
+                 href="./applications.html#aero-wec">Aérodynamisme en WEC</a>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="./interets.html">Intérêts & bénéfices</a>
+      </li>
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="./futures.html">Futures</a>
+      </li>
+      <li>
+        <a class="font-SF-Pro font-[200] text-[20px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+           href="./contact.html" aria-current="page">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main id="contenu" tabindex="-1" class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <header class="mb-8">
+      <h1 class="font-Kamerik text-[40px] font-[600]">Nous contacter</h1>
+      <p class="font-SF-Pro mt-2 max-w-prose">
+        Une question sur le contenu, l’accessibilité ou une suggestion d’amélioration ? Remplissez le formulaire ci-dessous.
+      </p>
+    </header>
+
+    <!-- Résumé des erreurs (apparait seulement en cas d’erreurs) -->
+    <div id="error-summary"
+         class="hidden mb-6 rounded-lg border border-red-300 bg-red-50 text-red-900 p-4"
+         role="alert" aria-live="assertive" tabindex="-1">
+      <h2 class="font-semibold">Veuillez corriger les erreurs suivantes :</h2>
+      <ul id="error-list" class="list-disc pl-6 mt-2"></ul>
+    </div>
+
+    <!-- Formulaire -->
+    <form id="contact-form" class="grid grid-cols-1 gap-6 max-w-2xl" method="post" action="#" novalidate aria-describedby="contact-help">
+      <p id="contact-help" class="sr-only">
+        Tous les champs marqués obligatoire doivent être remplis. Les erreurs seront annoncées automatiquement.
+      </p>
+
+      <!-- Honeypot anti-spam (caché des utilisateurs) -->
+      <div class="sr-only" aria-hidden="true">
+        <label for="website">Laissez ce champ vide</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Identité -->
+      <div>
+        <label for="fullname" class="block font-medium">Nom complet <span aria-hidden="true" class="text-red-600">*</span></label>
+        <input id="fullname" name="fullname" type="text" required autocomplete="name"
+               class="mt-1 w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2"
+               aria-describedby="fullname-hint">
+        <p id="fullname-hint" class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Ex. : Amine Ben Ali</p>
+        <p id="fullname-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </div>
+
+      <div>
+        <label for="email" class="block font-medium">E-mail <span aria-hidden="true" class="text-red-600">*</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" inputmode="email"
+               class="mt-1 w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2"
+               aria-describedby="email-hint">
+        <p id="email-hint" class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Nous ne partagerons jamais votre e-mail.</p>
+        <p id="email-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </div>
+
+      <div>
+        <label for="phone" class="block font-medium">Téléphone (optionnel)</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"
+               class="mt-1 w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2"
+               aria-describedby="phone-hint">
+        <p id="phone-hint" class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Format libre (ex. : +33 6 12 34 56 78).</p>
+        <p id="phone-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </div>
+
+      <!-- Objet & thème -->
+      <div>
+        <label for="subject" class="block font-medium">Objet du message <span aria-hidden="true" class="text-red-600">*</span></label>
+        <input id="subject" name="subject" type="text" required maxlength="120"
+               class="mt-1 w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2"
+               aria-describedby="subject-hint">
+        <p id="subject-hint" class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">120 caractères max.</p>
+        <p id="subject-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </div>
+
+      <fieldset class="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
+        <legend class="px-2 font-medium">Thème principal <span aria-hidden="true" class="text-red-600">*</span></legend>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">Choisissez une seule option.</p>
+        <div class="mt-3 grid grid-cols-1 gap-2" role="radiogroup" aria-describedby="topic-error">
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="topic" value="contenu" required class="h-4 w-4"> Contenu / correction
+          </label>
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="topic" value="accessibilite" class="h-4 w-4"> Accessibilité
+          </label>
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="topic" value="technique" class="h-4 w-4"> Technique / bug
+          </label>
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="topic" value="autre" class="h-4 w-4"> Autre
+          </label>
+        </div>
+        <p id="topic-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </fieldset>
+
+      <!-- Message -->
+      <div>
+        <label for="message" class="block font-medium">Votre message <span aria-hidden="true" class="text-red-600">*</span></label>
+        <textarea id="message" name="message" required rows="6"
+                  class="mt-1 w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2"
+                  aria-describedby="message-hint"></textarea>
+        <p id="message-hint" class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Expliquez votre demande le plus clairement possible.</p>
+        <p id="message-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </div>
+
+      <!-- Consentement -->
+      <div class="mt-2">
+        <label class="inline-flex items-start gap-3">
+          <input id="consent" name="consent" type="checkbox" required class="mt-[3px] h-4 w-4">
+          <span>J’accepte que les informations saisies soient utilisées uniquement pour traiter ma demande. <span class="text-zinc-600 dark:text-zinc-400">(obligatoire)</span></span>
+        </label>
+        <p id="consent-error" class="mt-1 text-sm text-red-700 hidden"></p>
+      </div>
+
+      <!-- Zone message de statut (succès/erreur générale) -->
+      <div id="form-status" class="mt-2 text-sm" role="status" aria-live="polite"></div>
+
+      <!-- Actions -->
+      <div class="mt-4 flex items-center gap-3">
+        <button type="submit"
+                class="rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-5 py-3 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+          Envoyer le message
+        </button>
+        <button type="reset"
+                class="rounded-xl border border-zinc-300 dark:border-zinc-700 px-5 py-3 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+          Réinitialiser
+        </button>
+      </div>
+    </form>
+
+    <!-- Coordonnées alternatives -->
+    <section class="mt-12">
+      <h2 class="font-Kamerik text-[24px] font-[600]">Autres moyens de contact</h2>
+      <p class="font-SF-Pro mt-2">Si vous préférez, vous pouvez nous écrire directement par e-mail :</p>
+      <p class="mt-2">
+        <a href="mailto:contact@example.com" class="underline underline-offset-4">contact@example.com</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer role="contentinfo" class="mt-16 border-t border-zinc-200 dark:border-zinc-800">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 grid gap-6 md:grid-cols-3">
+      <section aria-labelledby="pied-ressources">
+        <h2 id="pied-ressources" class="font-Kamerik text-[20px] font-[600]">Ressources</h2>
+        <ul class="mt-3 space-y-2 font-SF-Pro">
+          <li><a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+                 href="./plan.html">Plan du site</a></li>
+          <li><a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+                 href="./mentions.html">Mentions légales & RGPD</a></li>
+          <li><a class="underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+                 href="./accessibilite.html">Accessibilité</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="pied-contact">
+        <h2 id="pied-contact" class="font-Kamerik text-[20px] font-[600]">Contact</h2>
+        <p class="mt-3 font-SF-Pro">Tu peux aussi nous écrire directement.</p>
+        <a href="mailto:contact@example.com"
+           class="mt-2 inline-block rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-4 py-2 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+          Envoyer un e-mail
+        </a>
+      </section>
+
+      <section aria-labelledby="pied-aide">
+        <h2 id="pied-aide" class="font-Kamerik text-[20px] font-[600]">Aide à la navigation</h2>
+        <ul class="mt-3 space-y-2 font-SF-Pro">
+          <li>Tab / Maj+Tab pour naviguer.</li>
+          <li>Focus visible sur tous les champs et boutons.</li>
+          <li>Erreurs annoncées automatiquement.</li>
+        </ul>
+      </section>
+    </div>
+    <div class="text-center text-sm text-zinc-600 dark:text-zinc-400 pb-6">
+      © 2025 – Physique & Sport Auto
+    </div>
+  </footer>
+
+  <!-- Script accessibilité : synchro aria-expanded + validation accessible -->
+  <script>
+    // Synchroniser aria-expanded pour les <summary>
+    document.querySelectorAll('details.submenu').forEach(d => {
+      const s = d.querySelector('summary');
+      if (!s) return;
+      const sync = () => s.setAttribute('aria-expanded', d.open ? 'true' : 'false');
+      d.addEventListener('toggle', sync); sync();
+    });
+
+    // Validation accessible du formulaire (sans framework)
+    (function () {
+      const form = document.getElementById('contact-form');
+      const errorSummary = document.getElementById('error-summary');
+      const errorList = document.getElementById('error-list');
+      const statusBox = document.getElementById('form-status');
+
+      function setError(inputId, message) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(inputId + '-error');
+        if (!input || !error) return;
+        input.setAttribute('aria-invalid', 'true');
+        error.textContent = message;
+        error.classList.remove('hidden');
+        if (!input.hasAttribute('aria-describedby')) {
+          input.setAttribute('aria-describedby', inputId + '-error');
+        } else {
+          const d = input.getAttribute('aria-describedby');
+          if (!d.split(' ').includes(inputId + '-error')) {
+            input.setAttribute('aria-describedby', d + ' ' + inputId + '-error');
+          }
+        }
+      }
+
+      function clearError(inputId) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(inputId + '-error');
+        if (input) input.removeAttribute('aria-invalid');
+        if (error) { error.textContent = ''; error.classList.add('hidden'); }
+      }
+
+      function validate() {
+        const errors = [];
+        errorList.innerHTML = '';
+
+        const honeypot = document.getElementById('website');
+        if (honeypot && honeypot.value.trim() !== '') {
+          errors.push({ id: 'website', msg: 'Spam détecté.' });
+        }
+
+        // Champs requis
+        const requiredFields = [
+          { id: 'fullname', label: 'Nom complet' },
+          { id: 'email', label: 'E-mail' },
+          { id: 'subject', label: 'Objet du message' },
+          { id: 'message', label: 'Votre message' }
+        ];
+
+        requiredFields.forEach(f => {
+          const el = document.getElementById(f.id);
+          if (!el || !el.value.trim()) {
+            errors.push({ id: f.id, msg: `Le champ « ${f.label} » est obligatoire.` });
+          }
+        });
+
+        // E-mail
+        const email = document.getElementById('email')?.value.trim() || '';
+        if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+          errors.push({ id: 'email', msg: 'Veuillez saisir une adresse e-mail valide.' });
+        }
+
+        // Thème (radio group)
+        const topicChecked = [...document.querySelectorAll('input[name="topic"]')].some(r => r.checked);
+        if (!topicChecked) {
+          errors.push({ id: 'topic', msg: 'Veuillez sélectionner un thème.' });
+        }
+
+        // Consentement
+        const consent = document.getElementById('consent');
+        if (!consent.checked) {
+          errors.push({ id: 'consent', msg: 'Vous devez accepter le traitement de votre demande.' });
+        }
+
+        // Reset erreurs champ par champ
+        ['fullname','email','phone','subject','message'].forEach(clearError);
+        document.getElementById('topic-error').classList.add('hidden');
+        document.getElementById('topic-error').textContent = '';
+        document.getElementById('consent-error').classList.add('hidden');
+        document.getElementById('consent-error').textContent = '';
+
+        // Reporter
+        if (errors.length) {
+          // Marquer chaque champ
+          errors.forEach(e => {
+            if (e.id === 'topic') {
+              const tErr = document.getElementById('topic-error');
+              tErr.textContent = e.msg; tErr.classList.remove('hidden');
+            } else if (e.id === 'consent') {
+              const cErr = document.getElementById('consent-error');
+              cErr.textContent = e.msg; cErr.classList.remove('hidden');
+            } else {
+              setError(e.id, e.msg);
+            }
+            // Ajouter au récap
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + (e.id === 'topic' ? 'topic-error' : (e.id === 'consent' ? 'consent' : e.id));
+            a.textContent = e.msg;
+            a.className = 'underline';
+            li.appendChild(a);
+            errorList.appendChild(li);
+          });
+
+          errorSummary.classList.remove('hidden');
+          // Focus sur le résumé pour annonce immédiate
+          errorSummary.focus();
+          statusBox.textContent = '';
+          return false;
+        } else {
+          errorSummary.classList.add('hidden');
+          errorList.innerHTML = '';
+          return true;
+        }
+      }
+
+      form.addEventListener('submit', function (e) {
+        if (!validate()) {
+          e.preventDefault();
+          return;
+        }
+        e.preventDefault(); // démo statique
+        statusBox.textContent = 'Message envoyé. Merci pour votre retour !';
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
