@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibilité</title>
+  <meta name="description" content="Engagements d’accessibilité : navigation clavier, lecteurs d’écran, focus visibles, alternatives textuelles et conformité RGAA." />
+</head>
+<body>
+  <a href="#contenu" class="sr-only focus:not-sr-only">Aller au contenu</a>
+  <header role="banner" class="border-b p-4">
+    <p class="font-Kamerik text-xl font-semibold">Physique & Sport Auto</p>
+  </header>
+  <main id="contenu" class="max-w-[1280px] mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold">Accessibilité</h1>
+    <p>Notre site respecte les principes suivants :</p>
+    <ul class="list-disc pl-6 mt-4">
+      <li>Navigation complète au clavier.</li>
+      <li>Compatibilité lecteurs d’écran (titres hiérarchisés, landmarks).</li>
+      <li>Contrastes suffisants et focus visibles.</li>
+      <li>Images décrites via attribut <code>alt</code> pertinent.</li>
+      <li>Tableaux accompagnés d’une alternative textuelle.</li>
+    </ul>
+
+    <nav class="mt-12 flex justify-between">
+      <a href="./futures.html">← Revoir Futures</a>
+      <a href="./plan.html">Voir le Plan du site →</a>
+    </nav>
+  </main>
+</body>
+</html>
