@@ -10,12 +10,10 @@
 </head>
 
 <body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased">
-  <!-- Lien d’évitement -->
   <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
     Aller au contenu principal
   </a>
 
-  <!-- En-tête -->
   <header role="banner" class="w-full border-b border-zinc-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-zinc-800 dark:bg-zinc-900/80">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <p class="font-Kamerik text-xl font-[600]">Physique & Sport Auto</p>
@@ -23,7 +21,6 @@
     </div>
   </header>
 
-  <!-- Navigation principale (cohérente avec l’accueil) -->
   <nav aria-label="Navigation principale" class="border-b border-zinc-200 dark:border-zinc-800">
     <ul class="flex w-full h-[72px] justify-center items-center gap-[40px]">
       <li><a class="font-SF-Pro text-[18px] underline_decoration focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1" href="src/html/fondements.html" aria-current="page">Fondements</a></li>
@@ -42,7 +39,6 @@
   </nav>
 
   <main id="contenu" tabindex="-1" class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <!-- Fil d’Ariane -->
     <nav aria-label="Fil d’Ariane">
       <ol class="flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-400">
         <li><a class="underline underline-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1" href="./index.html">Accueil</a></li>
@@ -51,7 +47,6 @@
       </ol>
     </nav>
 
-    <!-- Titre de page -->
     <header class="mt-6">
       <h1 class="font-Kamerik text-[40px] font-[600]">Fondements de l’aérodynamisme</h1>
       <p class="font-SF-Pro mt-2 max-w-prose leading-relaxed">
@@ -60,7 +55,6 @@
       </p>
     </header>
 
-    <!-- Sommaire latéral (reliure interne) -->
     <aside aria-label="Table des matières" class="mt-8">
       <h2 class="sr-only">Table des matières</h2>
       <ul class="flex flex-wrap gap-3 text-sm font-SF-Pro">
@@ -74,7 +68,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Traînée -->
     <section id="trainee" aria-labelledby="trainee-titre" class="scroll-mt-28">
       <h2 id="trainee-titre" class="font-Kamerik text-[28px] font-[600]">Traînée (résistance de l’air)</h2>
       <p class="font-SF-Pro mt-2">
@@ -98,7 +91,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Appui -->
     <section id="appui" aria-labelledby="appui-titre" class="scroll-mt-28">
       <h2 id="appui-titre" class="font-Kamerik text-[28px] font-[600]">Appui (downforce)</h2>
       <p class="font-SF-Pro mt-2">
@@ -131,7 +123,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Paramètres clés -->
     <section id="parametres" aria-labelledby="parametres-titre" class="scroll-mt-28">
       <h2 id="parametres-titre" class="font-Kamerik text-[28px] font-[600]">Paramètres clés</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
@@ -156,7 +147,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Compromis & exemples -->
     <section id="compromis" aria-labelledby="compromis-titre" class="scroll-mt-28">
       <h2 id="compromis-titre" class="font-Kamerik text-[28px] font-[600]">Compromis & exemples</h2>
       <p class="font-SF-Pro mt-2">
@@ -212,7 +202,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Glossaire -->
     <section id="glossaire" aria-labelledby="glossaire-titre" class="scroll-mt-28">
       <h2 id="glossaire-titre" class="font-Kamerik text-[28px] font-[600]">Glossaire rapide</h2>
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -235,7 +224,6 @@
       </div>
     </section>
 
-    <!-- Lien de progression -->
     <nav aria-label="Navigation chapitre" class="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <a href="./index.html" class="inline-block rounded-xl border border-zinc-300 dark:border-zinc-700 px-5 py-3 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
         ← Retour à l’accueil
@@ -275,7 +263,6 @@
     <div class="text-center text-sm text-zinc-600 dark:text-zinc-400 pb-6">© 2025 – Physique & Sport Auto</div>
   </footer>
 
-  <!-- Sync aria-expanded pour <summary> -->
   <script>
     const details = document.querySelectorAll('details');
     details.forEach(d => {

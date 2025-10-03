@@ -2,8 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+<<<<<<< HEAD
   <!-- Tailwind compilé chez toi -> src/style.css -->
   <link rel="stylesheet" href="/src/style.css">
+=======
+  <link rel="stylesheet" href="/src/style.css">
+>>>>>>> 14ea8a12885451f3b248bf958f945e7c75212024
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark">
   <title>Aérodynamisme en sport auto – Accueil</title>
@@ -11,8 +15,12 @@
 </head>
 
 <body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased">
+<<<<<<< HEAD
   <!-- Lien d’évitement -->
   <a href="/#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
+=======
+  <a href="/#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
+>>>>>>> 14ea8a12885451f3b248bf958f945e7c75212024
     Aller au contenu principal
   </a>
 
@@ -22,12 +30,10 @@
         <span aria-hidden="true" class="text-2xl">🏎️</span>
         <p class="font-Kamerik text-xl font-[600]">Physique & Sport Auto</p>
       </div>
-      <!-- Zone d'infos d'accessibilité courte -->
       <p class="sr-only" id="site-desc">Site pédagogique sur l’aérodynamisme et la physique du sport automobile, entièrement navigable au clavier et compatible lecteurs d’écran.</p>
     </div>
   </header>
 
-  <!-- Navigation principale -->
   <nav aria-label="Navigation principale" class="border-b border-zinc-200 dark:border-zinc-800">
     <ul class="flex w-full h-[100px] justify-center items-center gap-[60px]">
       <li>
@@ -37,7 +43,6 @@
         </a>
       </li>
 
-      <!-- Remplacement du sous-menu par <details> pour accessibilité clavier/sans JS -->
       <li class="relative">
         <details class="submenu group">
           <summary class="list-none font-SF-Pro font-[200] text-[20px] underline_decoration cursor-pointer rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
@@ -81,7 +86,6 @@
   </nav>
 
   <main id="contenu" tabindex="-1" class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- En-tête visuelle de page -->
     <section class="flex flex-col items-center pt-8">
       <figure class="w-full">
         <img src="public/images/index_aero.png"
@@ -98,7 +102,6 @@
       </p>
     </section>
 
-    <!-- Intro accessible -->
     <section aria-labelledby="intro-titre" class="mt-12">
       <h2 id="intro-titre" class="font-Kamerik text-[32px] font-[600]">Pourquoi l’aérodynamisme compte</h2>
       <p class="font-SF-Pro leading-relaxed mt-4">
@@ -113,7 +116,6 @@
       </ul>
     </section>
 
-    <!-- Bloc Fondements (aperçu + CTA) -->
     <section aria-labelledby="fondements-titre" class="mt-12">
       <h2 id="fondements-titre" class="font-Kamerik text-[28px] font-[600]">Aperçu des fondements</h2>
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -145,7 +147,6 @@
       </div>
     </section>
 
-    <!-- Bloc Applications -->
     <section aria-labelledby="apps-titre" class="mt-16">
       <h2 id="apps-titre" class="font-Kamerik text-[28px] font-[600]">Applications (F1 & WEC)</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
@@ -180,7 +181,6 @@
       </div>
     </section>
 
-    <!-- Bloc Intérêts & Futures -->
     <section aria-labelledby="interets-titre" class="mt-16">
       <h2 id="interets-titre" class="font-Kamerik text-[28px] font-[600]">Intérêts & perspectives</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
@@ -224,6 +224,10 @@
         </article>
       </div>
     </section>
+    <p class="">L’aérodynamisme est l’un des piliers de la performance en sport automobile. Plus qu’une simple question de
+      vitesse, il s’agit d’un équilibre subtil entre appui, traînée et efficacité énergétique. Chaque courbe, chaque
+      aile et chaque diffuseur sont étudiés pour transformer l’air en un véritable allié sur la piste.Qu’est-ce que
+      l’aérodynamisme en course ?</p>
   </main>
 
   <footer role="contentinfo" class="mt-16 border-t border-zinc-200 dark:border-zinc-800">
@@ -263,9 +267,7 @@
     </div>
   </footer>
 
-  <!-- Améliorations d’accessibilité spécifiques au sous-menu via <details> -->
   <script>
-    // Synchronise aria-expanded sur <summary> quand <details> s'ouvre/ferme (facilite AT)
     const details = document.querySelectorAll('details.submenu');
     details.forEach(d => {
       const summary = d.querySelector('summary');

@@ -10,12 +10,10 @@
 </head>
 
 <body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased">
-  <!-- Lien d’évitement -->
   <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-amber-400 focus:px-3 focus:py-2 focus:text-black">
     Aller au contenu principal
   </a>
 
-  <!-- En-tête -->
   <header role="banner" class="w-full border-b border-zinc-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-zinc-800 dark:bg-zinc-900/80">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <p class="font-Kamerik text-xl font-[600]">Physique & Sport Auto</p>
@@ -23,7 +21,6 @@
     </div>
   </header>
 
-  <!-- Navigation principale -->
   <nav aria-label="Navigation principale" class="border-b border-zinc-200 dark:border-zinc-800">
     <ul class="flex w-full h-[72px] justify-center items-center gap-[40px]">
       <li>
@@ -63,7 +60,6 @@
   </nav>
 
   <main id="contenu" tabindex="-1" class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <!-- Fil d’Ariane -->
     <nav aria-label="Fil d’Ariane">
       <ol class="flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-400">
         <li><a class="underline underline-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1" href="../../index.html">Accueil</a></li>
@@ -72,7 +68,6 @@
       </ol>
     </nav>
 
-    <!-- Titre de page -->
     <header class="mt-6">
       <h1 class="font-Kamerik text-[40px] font-[600]">Applications : F1 & WEC</h1>
       <p class="font-SF-Pro mt-2 max-w-prose leading-relaxed">
@@ -83,7 +78,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Section F1 -->
     <section id="aero-f1" aria-labelledby="f1-titre" class="scroll-mt-28">
       <h2 id="f1-titre" class="font-Kamerik text-[28px] font-[600]">Aérodynamisme en F1</h2>
       <p class="font-SF-Pro mt-2">
@@ -130,7 +124,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Section WEC -->
     <section id="aero-wec" aria-labelledby="wec-titre" class="scroll-mt-28">
       <h2 id="wec-titre" class="font-Kamerik text-[28px] font-[600]">Aérodynamisme en WEC (Endurance)</h2>
       <p class="font-SF-Pro mt-2">
@@ -169,7 +162,6 @@
 
     <hr class="my-8 border-zinc-200 dark:border-zinc-800" />
 
-    <!-- Tableau comparatif + alternative accessible -->
     <section aria-labelledby="comparatif-titre" class="scroll-mt-28">
       <h2 id="comparatif-titre" class="font-Kamerik text-[28px] font-[600]">Comparatif synthétique</h2>
 
@@ -215,7 +207,6 @@
       </details>
     </section>
 
-    <!-- Navigation chapitre -->
     <nav aria-label="Navigation chapitre" class="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <a href="./fondements.html" class="inline-block rounded-xl border border-zinc-300 dark:border-zinc-700 px-5 py-3 font-SF-Pro focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
         ← Revoir les Fondements
@@ -258,7 +249,6 @@
     <div class="text-center text-sm text-zinc-600 dark:text-zinc-400 pb-6">© 2025 – Physique & Sport Auto</div>
   </footer>
 
-  <!-- Sync aria-expanded pour <summary> -->
   <script>
     const details = document.querySelectorAll('details');
     details.forEach(d => {
